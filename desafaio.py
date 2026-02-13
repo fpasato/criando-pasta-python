@@ -1,21 +1,18 @@
 import os
 
 while True:
-
     nome = input('Digite o nome da pasta: ').strip().lower()
 
     if nome == '':
-        print('Nome invalido, tente novamente')
+        print("\033[0;30;41mNome invalido, tente novamente\033[m")
         continue
 
     if os.path.exists(nome):
+        print(f"\033[0;30;43mA pasta com nome {nome} já existe\033[m")
 
-        print(f'A pasta com nome {nome} já existe')
-        print()
     else:
         os.mkdir(nome)
-        print("Pasta criada com sucesso!!")
-        print()
+        print("\033[0;30;42mPasta criada com sucesso!!\033[m")
 
          
     continuar = input('Deseja Criar uma nova pasta? \n[S]sim \nQualquer outra tecla para não\n ')
