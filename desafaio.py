@@ -3,6 +3,10 @@ import os
 while True:
 
     nome = input('Digite o nome da pasta: ').strip().lower()
+
+    if nome == '':
+        print('Nome invalido, tente novamente')
+        continue
     print()
     if os.path.exists(nome):
 
